@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+<title>Nochovna</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:green;font-size:32px;">
+<script language="JavaScript">
+var D1_noc=prompt("D1=","");
+var D2_noc=prompt("D2=","");
+var sekund;
+var a=parseFloat(D1_noc);
+var b=parseFloat(D2_noc);
+sekund=(b-a)*86400;
+if (sekund < 0) {
+sekund = Math.abs(sekund);
+}
+document.write("ilość sekund="+sekund+" sekund <br>");
+</script>
+</div>
+</body>
+</html>
