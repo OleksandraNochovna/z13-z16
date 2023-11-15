@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_siejka()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+ <textarea name="siejka" cols="80" rows="20" readonly> 
+    <!DOCTYPE html>
+    <html lang="pl-PL">
+    <head>
+    <title> Nochovna </title>
+    <meta charset="utf-8">
+    </head>
+    <body>
+    <script type="text/javascript">
+        function AB_noc()
+        {
+        var xa_noc= parseFloat(document.getElementById('xa').value);
+        var xb_noc= parseFloat(document.getElementById('xb').value);
+        var ya_noc= parseFloat(document.getElementById('ya').value);
+        var yb_noc= parseFloat(document.getElementById('yb').value);
+        var AB_noc = Math.sqrt(Math.pow(xb_noc - xa_noc, 2) + Math.pow(yb_noc - ya_noc, 2));
+        document.getElementById("odp").innerHTML ="Odległość AB = "+ AB_noc.toFixed(2)+" cm";
+        }
+        function BC_noc()
+        {
+        var xb_noc= parseFloat(document.getElementById('xb').value);
+        var xc_noc= parseFloat(document.getElementById('xc').value);
+        var yb_noc= parseFloat(document.getElementById('yb').value);
+        var yc_noc= parseFloat(document.getElementById('yc').value);
+        var BC_noc = Math.sqrt(Math.pow(xc_noc - xb_noc, 2) + Math.pow(yc_noc - yb_noc, 2));
+        document.getElementById("odp").innerHTML ="Odległość BC = "+ BC_noc.toFixed(2)+" cm";
+        }
+        function AC_noc()
+        {
+        var xa_noc= parseFloat(document.getElementById('xa').value);
+        var xc_noc= parseFloat(document.getElementById('xc').value);
+        var ya_noc= parseFloat(document.getElementById('ya').value);
+        var yc_noc= parseFloat(document.getElementById('yc').value);
+        var AC_noc = Math.sqrt(Math.pow(xc_noc - xa_noc, 2) + Math.pow(yc_noc - ya_noc, 2));
+        document.getElementById("odp").innerHTML ="Odległość AC = "+ AC_noc.toFixed(2)+" cm";
+        }
+        </script>
+        <p>Podaj x punktu A:</p> <input type="text" id="xa" > <br><br><br>
+        <p>Podaj y punktu A:</p> <input type="text" id="ya" > <br><br><br>
+        <p>Podaj x punktu B:</p> <input type="text" id="xb" > <br><br><br>
+        <p>Podaj y punktu B:</p> <input type="text" id="yb" > <br><br><br>
+        <p>Podaj x punktu C:</p> <input type="text" id="xc" > <br><br><br>
+        <p>Podaj y punktu C:</p> <input type="text" id="yc" > <br><br><br>
+    
+        <input type="button" name="ab" value="ab" Onclick="AB_noc()"><br><br>
+        <input type="button" name="bc" value="bc" Onclick="BC_noc()"><br><br>
+        <input type="button" name="ac" value="ac" Onclick="AC_noc()"><br><br>
+        
+        <div style="color:rgb(107, 0, 0);font-size:50px;"id="odp"></div>
+        </body>
+        </html>
+          
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>  

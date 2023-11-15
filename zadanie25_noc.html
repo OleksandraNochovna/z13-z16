@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Oleksandra Nochovna</title>
+</head>
+<body>
+<div style="color:rgb(34, 0, 255);font-size:52px;">
+<script language="JavaScript">
+var No_noc=prompt("No=","");
+var No=parseFloat(No_noc);
+
+var t_noc=prompt("t=","");
+var t=parseFloat(t_noc);
+
+var  T1_2_noc=prompt("T1/2=","");
+var  T1_2=parseFloat( T1_2_noc);
+
+
+var lam = (Math.LN2 / T1_2).toFixed(7);
+var N = (No * Math.pow(Math.E, -lam * t)).toFixed(7);
+
+document.write("N0="+No+"[sztuk]\n"+"<br>");
+document.write("t="+t+"[lat]\n"+"<br>");
+document.write("T1/2="+T1_2+"[lat]\n"+"<br>");
+document.write("Lambda="+lam+"[1/rok]\n"+"<br>");
+document.write("N="+N+"[sztuk]\n"+"<br>");
+
+</script>
+</div>
+</body>
+</html>

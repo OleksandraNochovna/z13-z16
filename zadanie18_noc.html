@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_noc(a, b) {
+return a + b;
+}
+function odejmowanie_noc(a, b) {
+return a - b;
+}
+function mnozenie_noc(a, b) {
+return a * b;
+}
+ function od_kwadratu_noc(a, b) {
+var a_kwadrat = a * a;
+var b_kwadrat = b * b;
+return [a_kwadrat, b_kwadrat];
+}
+function reszta_z_dzielenia_a_przez_b__noc(a, b) {
+return a % b;
+}
+document.write("suma="+suma_noc(a,b)+"<br>");
+document.write("odejmowanie="+odejmowanie_noc(a,b)+"<br>");
+document.write("mnozenie="+mnozenie_noc(a,b)+"<br>");
+var kwadraty = od_kwadratu_noc(a, b);
+document.write("kwadrat a=" + kwadraty[0] + "<br>");
+document.write("kwadrat b=" + kwadraty[1] + "<br>");
+document.write("reszta z dzielenia a przez b=" + reszta_z_dzielenia_a_przez_b_noc(a, b) + "<br>");
+</script>
+</div>
+</body>
+</html>

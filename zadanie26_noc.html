@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <title>Nochovna</title>
+<script language="JavaScript">
+function Pow_nochovna(a, b, h) {
+var a_noc = parseFloat(a);
+var b_noc = parseFloat(b);
+var h_noc = parseFloat(h);
+var pow = ((a_noc + b_noc) / 2) * h_noc;
+document.getElementsByName('pole')[0].value = pow.toFixed(2);
+}
+function Obw_nochovna(a, b, h) {
+var obw = Math.sqrt(Math.pow((Math.abs(a - b)) / 2, 2) + Math.pow(h, 2));
+document.getElementsByName('obwod')[0].value = obw.toFixed(2);
+}
+</script>
+</head>
+<body>
+<form name="formularz" onsubmit="Pow_nochovna(this.a.value, this.b.value, this.h.value); Obw_nochovna(this.a.value, this.b.value, this.h.value); return false;">
+Podaj a=
+<input size="6" name="a">
+Podaj b=
+<input size="6" name="b">
+Podaj h=
+<input size="6" name="h">
+<br> <br>
+<input type="submit" value="oblicz">
+<br> <br>
+Pole=
+<input size="6" name="pole">
+Obwód=
+<input size="6" name="obwod">
+</form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<script type="text/javascript">
+function okno_zamknij_siejka()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+    <!DOCTYPE html>
+    <html lang="pl-PL">
+    <head>
+    <title>Nochovna</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+    function onLoad() {
+      zad24();
+    }
+    
+    function zad24() {
+      var imie = prompt("Podaj swoje imię:");
+      var imie_noc = imie.length;
+      var x1 = prompt("Proszę wprowadzić x1:");
+      var x1_noc = parseFloat(x1);
+      var x2 = prompt("Proszę wprowadzić x2:");
+      var x2_noc = parseFloat(x2);
+    
+      fy1(x1_noc, x2_noc, imie_noc);
+      fy2(x1_noc);
+      fy3(x1_noc, x2_noc);
+    }
+    
+    function fy1(x1, x2, imie_noc) {
+      var y1 = 3 * Math.pow(x1, (imie_noc / (imie_noc + 2)));
+      document.getElementById("x1_noc").innerHTML = "x1 = " + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2 = " + x2 + "<br>";
+      document.getElementById("y1_noc").innerHTML = "y1=" + y1.toFixed(2) + "<br>";
+    }
+    
+    function fy2(x1) {
+      var x1_noc = parseFloat(x1);
+      var x1r = x1_noc * Math.PI / 180;
+      var y2 = 2 * Math.cos(x1r) + 3 * Math.sin(x1r);
+      document.getElementById("y2_noc").innerHTML = "y2 = " + y2.toFixed(2) + "<br>";
+      document.getElementById("x1r_noc").innerHTML = "x1 = " + x1_noc + " x1 = " + x1r.toFixed(2) + "<br>";
+    }
+    
+    function fy3(x1, x2) {
+      var y3 = Math.cbrt(Math.pow(x1, 5) + 2 * Math.pow(x2, 4)) * Math.abs(x1 - x2);
+      document.getElementById("y3_noc").innerHTML = "y3 = " + y3.toFixed(2) + "<br>";
+    }
+    </script>
+    </script>
+    </head>
+    <body style="background-color: #808080;"  onload="onLoad()">
+    <table style="color: blue;">
+    <tr><td id="x1_noc"></td></tr>
+    <tr><td id="x1r_noc"></td></tr>
+    <tr><td id="y1_noc"></td></tr>
+    <tr><td id="y2_noc"></td></tr>
+    <tr><td id="y3_noc"></td></tr>
+    </table>
+    </body>
+    </html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

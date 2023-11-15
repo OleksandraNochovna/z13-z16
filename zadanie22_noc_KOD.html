@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<script type="text/javascript">
+function okno_zamknij_siejka()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+ <textarea name="siejka" cols="80" rows="20" readonly> 
+ <!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<title>Nochovna</title>
+<script language="JavaScript">
+function Pole_nochovna(a_noc,b_noc)
+{
+ var a_dana_noc=parseFloat(a_noc)
+ var b_dana_noc=parseFloat(b_noc)
+ var Pole_nochovna=a_dana_noc*b_dana_noc;
+document.getElementsByName('pole')[0].value=Pole_nochovna.toFixed(2);
+alert("Pole="+Pole_nochovna.toFixed(2)+" cm^2");
+wyprowadz_pole_noc.innerHTML="Pole="+Pole_nochovna.toFixed(2)+" cm^2"+"<br>";
+}
+function Obwod_nochovna(a_noc,b_noc)
+{
+var a_dana_noc=parseFloat(a_noc)
+var b_dana_noc=parseFloat(b_noc)
+var Obwod_nochovna=2 * (a_dana_noc + b_dana_noc);
+document.getElementsByName('obw')[0].value=Obwod_nochovna.toFixed(2);
+alert("Obwód="+Obwod_nochovna.toFixed(2)+" cm");
+wyprowadz_obwod_noc.innerHTML="Obwód="+Obwod_nochovna.toFixed(2)+"cm";
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Pobliczanie Pola i Obwodu walca</h1>
+<br> <br>
+<form name="formularz" onsubmit="Pole_nochovna(this.a_noc.value, this.b_noc.value); Obwod_nochovna(this.a_noc.value, this.b_noc.value);
+return false">
+Podaj a=
+<input size="6" name="a_noc">
+Podaj b=
+<input size="6" name="b_noc">
+<br> <br>
+<input type="submit" Value="oblicz" >
+<br> <br>
+Pole=
+<input size="6" name="pole">
+Obwód=
+<input size="6" name="obw">
+<table>
+<tr id="wyprowadz_pole_noc"></tr>
+<tr id="wyprowadz_obwod_noc"></tr>
+</table>
+</form>
+</body>
+</html>
+   </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
