@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<script type="text/javascript">
+function okno_zamknij_siejka()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+
+    <html>
+        <head>
+        <script type="text/javascript">
+        var Mebel = {
+        rodzaj: 'stół',
+        kolor: 'czarny',
+        material: 'plastik',
+        Mebel_wyswietl_nochovna: function ()
+        {
+        document.write(this.rodzaj + ' ' + this.kolor)
+        }
+        }
+        Mebel.Mebel_wyswietl_nochovna();
+        Mebel.rokwyprodukowania=2019;
+        Mebel.Mebel_pokaz_nochovna=function() {alert('Rok wyprodukowania: ' + this.rokwyprodukowania + 'r.')}
+        Mebel.Mebel_pokaz_nochovna();
+        </script>
+        </head>
+        <body>
+        <br>
+        programowanie obiektowe
+        </body>
+        </html>
+
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

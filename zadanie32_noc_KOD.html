@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<script type="text/javascript">
+function okno_zamknij_siejka()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+
+    <html>
+        <head>
+        <script type="text/javascript">
+        function Mebel(rodzaj_n,kolor_n,material_n)
+       {
+       this.rodzaj=rodzaj_n;
+       this.kolor=kolor_n;
+       this.material=material_n;
+       }
+       Mebel.prototype.Mebel_pokaz_nochovna = function () 
+        {
+        alert(this.rodzaj + ' ' + this.kolor+ ' ' + this.material);
+        };
+       var Mebel1 = new Mebel("stół", "czarny", "plastik"); 
+       var Mebel2 = new Mebel('krzesło', 'czerwone', 'plastik');
+       Mebel1.Mebel_pokaz_nochovna(); 
+       Mebel2.Mebel_pokaz_nochovna();
+        document.write("dostęp do właściwości"+"<br>");
+        document.write("Mebel pierwsza"+" "+Mebel1.rodzaj+" "+Mebel1.kolor+" "+Mebel1.material);
+        </script>
+        </head>
+       <body>
+       <br>
+        programowanie obiektowe 
+       </body>
+       </html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
